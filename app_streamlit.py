@@ -1,10 +1,16 @@
 import streamlit as st
 import pandas as pd
-import joblib 
+import joblib
+
+st.set_page_config(
+    page_title="Prediksi Kualitas Kopi",
+    page_icon="☕",
+    layout="centered"
+)
 
 model = joblib.load("model_klasifikasi_kualitas_kopi.joblib")
 
-st.title("Kualitas Kopi")
+st.title("☕Klasifikasi Kualitas Kopi")
 st.markdown("Aplikasi machine learning untuk memprediksi kualitas kopi dengan kategori Baik, Sedang, atau Buruk berdasarkan fitur seperti aroma, warna, keasaman, dan ukuran biji.")
 
 kafein = st.number_input("Kadar Kafein", 50, 200, 90, 1)
@@ -34,4 +40,5 @@ if st.button("Prediksi"):
 
 st.divider()
 st.caption("Dibuat oleh Raditya Fauzi Pratama")
+
 
