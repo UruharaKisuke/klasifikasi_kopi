@@ -5,7 +5,7 @@ import joblib
 model = joblib.load("model_klasifikasi_kualitas_kopi.joblib")
 
 st.title("Kualitas Kopi")
-st.markdown("Aplikasi machine learning untuk memprediksi kualitas kopi: Baik, Sedang, Buruk")
+st.markdown("Aplikasi machine learning untuk memprediksi kualitas kopi dengan kategori Baik, Sedang, atau Buruk berdasarkan fitur seperti aroma, warna, keasaman, dan ukuran biji.")
 
 kafein = st.number_input("Kadar Kafein", 50, 200, 90, 1)
 keasaman = st.number_input("Tingkat Keasaman", 2.0, 10.0, 5.0, 0.1)
@@ -34,3 +34,4 @@ if st.button("Prediksi"):
 
 st.divider()
 st.caption("Dibuat oleh Raditya Fauzi Pratama")
+
